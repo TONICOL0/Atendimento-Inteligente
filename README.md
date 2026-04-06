@@ -1,4 +1,4 @@
-# Konecta - Atendimento Inteligente
+# Atendimento Inteligente
 
 Sistema completo de atendimento ao cliente com automação WhatsApp para escritórios jurídicos. Integra CRM, chatbots e follow-up automático em uma stack Docker Compose.
 
