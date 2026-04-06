@@ -33,8 +33,8 @@ Sistema completo de atendimento ao cliente com automação WhatsApp para escrit�
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/TONICOL0/konecta.git
-cd konecta
+git clone https://github.com/TONICOL0/Atendimento-Inteligente.git
+cd Atendimento-Inteligente
 ```
 
 ### 2. Configure as variáveis de ambiente
