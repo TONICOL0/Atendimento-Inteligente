@@ -12,7 +12,7 @@ backups/
 node_modules/
 
 # Documentação gerada
-Konecta_Documentacao_Completa.pdf
+*.pdf
 scripts/gerar_documentacao.py
 
 # Imagens de exemplo

@@ -1,6 +1,6 @@
 #!/bin/bash
 # ============================================
-# Konecta - Restauração de Databases
+# Proj-Chat - Restauração de Databases
 # ============================================
 # Este script restaura todas as databases de configuração
 # na VPS após um deploy limpo.
@@ -15,11 +15,11 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DUMP_DIR="$SCRIPT_DIR/db-dumps"
-CONTAINER="konecta-postgres"
-DB_USER="${POSTGRES_USER:-konecta}"
+CONTAINER="proj-chat-postgres"
+DB_USER="${POSTGRES_USER:-proj_chat}"
 
 echo "============================================"
-echo "  Konecta - Restauração de Databases"
+echo "  Proj-Chat - Restauração de Databases"
 echo "============================================"
 echo ""
 

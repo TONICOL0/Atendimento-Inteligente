@@ -1,6 +1,6 @@
 #!/bin/bash
 # ============================================
-# Konecta - Linkar Instância do WhatsApp
+# Proj-Chat - Linkar Instância do WhatsApp
 # ============================================
 # Após conectar o WhatsApp via QR code no Evolution API,
 # execute este script para configurar TypeBot + Chatwoot.
@@ -9,7 +9,7 @@
 #   bash scripts/link-instance.sh <nome-da-instancia>
 #
 # Exemplo:
-#   bash scripts/link-instance.sh konecta-principal
+#   bash scripts/link-instance.sh proj-chat-principal
 # ============================================
 
 set -e
@@ -21,7 +21,7 @@ CHATWOOT_URL_INTERNAL="${CHATWOOT_URL_INTERNAL:-http://chatwoot-rails:3000}"
 CHATWOOT_API_TOKEN="${CHATWOOT_API_TOKEN:?Defina CHATWOOT_API_TOKEN}"
 CHATWOOT_ACCOUNT_ID="${CHATWOOT_ACCOUNT_ID:-1}"
 TYPEBOT_URL_INTERNAL="${TYPEBOT_URL_INTERNAL:-http://typebot-viewer:3000}"
-TYPEBOT_BOT_ID="${TYPEBOT_BOT_ID:-konecta-juridico}"
+TYPEBOT_BOT_ID="${TYPEBOT_BOT_ID:-proj-chat-juridico}"
 TYPEBOT_TRIGGER="${TYPEBOT_TRIGGER:-planejamento previdenci}"
 
 # Validar argumento
@@ -39,7 +39,7 @@ if [ -z "$INSTANCE_NAME" ]; then
 fi
 
 echo "============================================"
-echo "  Konecta - Linkar Instância: $INSTANCE_NAME"
+echo "  Proj-Chat - Linkar Instância: $INSTANCE_NAME"
 echo "============================================"
 echo ""
 

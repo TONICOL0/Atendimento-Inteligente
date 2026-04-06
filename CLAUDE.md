@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Konecta is a Docker Compose orchestration of microservices for legal services (Konecta Jurídico) customer support and WhatsApp automation. It integrates Chatwoot (CRM), Evolution API (WhatsApp), TypeBot (chatbots), PostgreSQL, Redis, and MinIO. The only custom code is the `followup/` Node.js worker.
+Proj-Chat is a Docker Compose orchestration of microservices for legal services (Proj-Chat Jurídico) customer support and WhatsApp automation. It integrates Chatwoot (CRM), Evolution API (WhatsApp), TypeBot (chatbots), PostgreSQL, Redis, and MinIO. The only custom code is the `followup/` Node.js worker.
 
 ## Common Commands
 
@@ -35,7 +35,7 @@ bash scripts/setup.sh
 bash scripts/restore-db.sh
 
 # Link a WhatsApp instance to TypeBot + Chatwoot
-bash scripts/link-instance.sh konecta-principal
+bash scripts/link-instance.sh proj-chat-principal
 
 # Backup (runs daily at 3am via cron)
 bash scripts/backup.sh
@@ -53,10 +53,10 @@ bash scripts/backup.sh
 - **Follow-up Worker** — custom Node.js polling service, built from `followup/Dockerfile`
 
 ### Container Names
-All containers are prefixed `konecta-`: `konecta-postgres`, `konecta-redis`, `konecta-minio`, `konecta-evolution`, `konecta-chatwoot`, `konecta-chatwoot-sidekiq`, `konecta-typebot-builder`, `konecta-typebot-viewer`, `konecta-followup`.
+All containers are prefixed `proj-chat-`: `proj-chat-postgres`, `proj-chat-redis`, `proj-chat-minio`, `proj-chat-evolution`, `proj-chat-chatwoot`, `proj-chat-chatwoot-sidekiq`, `proj-chat-typebot-builder`, `proj-chat-typebot-viewer`, `proj-chat-followup`.
 
 ### Network
-All services share a single bridge network `konecta-network`. Inter-service communication uses Docker service names (e.g., `http://chatwoot-rails:3000`, `http://evolution-api:8080`).
+All services share a single bridge network `proj-chat-network`. Inter-service communication uses Docker service names (e.g., `http://chatwoot-rails:3000`, `http://evolution-api:8080`).
 
 ### Follow-up Worker (`followup/index.js`)
 The only custom code. Single file, single dependency (`axios`). Polls Chatwoot resolved conversations every `FOLLOWUP_INTERVAL_MS` (default: 1800000ms = 30 min) and sends automated WhatsApp messages via Evolution API.
@@ -93,9 +93,9 @@ Copy `.env.example` to `.env` and generate strong secrets for all `GERAR_*` plac
 ## Key Identifiers
 
 **WhatsApp instances** (created in Evolution API):
-- `konecta-principal` — main production
-- `konecta-secundario` — secondary production
-- `konecta-teste` — testing
+- `proj-chat-principal` — main production
+- `proj-chat-secundario` — secondary production
+- `proj-chat-teste` — testing
 
 **Chatwoot labels used by follow-up logic**:
 - `followup-sent-1`, `followup-sent-2`, `followup-sent-3` — state tracking

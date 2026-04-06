@@ -1,4 +1,4 @@
-# Atendimento Inteligente
+# Proj-Chat - Atendimento Inteligente
 
 Sistema completo de atendimento ao cliente com automação WhatsApp para escritórios jurídicos. Integra CRM, chatbots e follow-up automático em uma stack Docker Compose.
 
@@ -72,7 +72,7 @@ Este script:
 ### 5. Crie o admin do Chatwoot
 
 ```bash
-docker exec -it konecta-chatwoot bundle exec rails console
+docker exec -it proj-chat-chatwoot bundle exec rails console
 ```
 
 No console Rails:
@@ -85,13 +85,13 @@ SuperAdmin.create!(email: 'seu@email.com', password: 'SuaSenhaForte!', name: 'Ad
 Acesse a Evolution API para escanear o QR code:
 
 ```bash
-curl http://localhost:8081/instance/connect/konecta-principal -H 'apikey: SUA_API_KEY'
+curl http://localhost:8081/instance/connect/proj-chat-principal -H 'apikey: SUA_API_KEY'
 ```
 
 ### 7. Vincule o WhatsApp ao Chatwoot + TypeBot
 
 ```bash
-bash scripts/link-instance.sh konecta-principal
+bash scripts/link-instance.sh proj-chat-principal
 ```
 
 Este script configura automaticamente:
@@ -155,7 +155,7 @@ O backup roda automaticamente às 3h da manhã via cron:
 ```bash
 # Adicionar ao crontab
 crontab -e
-0 3 * * * /opt/konecta/scripts/backup.sh
+0 3 * * * /opt/proj-chat/scripts/backup.sh
 ```
 
 Faz backup de:

@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 // ============================================
-// Konecta - Follow-up Worker
+// Proj-Chat - Follow-up Worker
 // ============================================
 // Envia mensagens de follow-up automáticas para
 // conversas resolvidas sem retorno do lead.
@@ -15,7 +15,7 @@ const CONFIG = {
   evolution: {
     apiUrl: process.env.EVOLUTION_API_URL || "http://evolution-api:8080",
     apiKey: process.env.EVOLUTION_API_KEY,
-    instanceName: process.env.EVOLUTION_INSTANCE_NAME || "konecta-principal",
+    instanceName: process.env.EVOLUTION_INSTANCE_NAME || "proj-chat-principal",
   },
   intervalMs: parseInt(process.env.FOLLOWUP_INTERVAL_MS) || 1800000, // 30 min
   day1Hours: parseInt(process.env.FOLLOWUP_DAY1_HOURS) || 24,
@@ -25,7 +25,7 @@ const CONFIG = {
 
 const FOLLOWUP_MESSAGES = {
   day1: (name) =>
-    `Olá${name ? `, ${name}` : ""}! Aqui é do escritório Konecta Jurídico. Gostaríamos de saber se restou alguma dúvida sobre nosso atendimento. Estamos à disposição! 😊`,
+    `Olá${name ? `, ${name}` : ""}! Aqui é do escritório Proj-Chat Jurídico. Gostaríamos de saber se restou alguma dúvida sobre nosso atendimento. Estamos à disposição! 😊`,
   day3: (name) =>
     `Olá${name ? `, ${name}` : ""}! Notamos que ainda não retornou. Podemos ajudar com algo mais? Responda essa mensagem a qualquer momento.`,
   day7: (name) =>
@@ -184,7 +184,7 @@ async function processFollowups() {
 // Inicialização
 // ============================================
 console.log("============================================");
-console.log("  Konecta Follow-up Worker");
+console.log("  Proj-Chat Follow-up Worker");
 console.log("============================================");
 console.log(`Chatwoot API: ${CONFIG.chatwoot.apiUrl}`);
 console.log(`Evolution API: ${CONFIG.evolution.apiUrl}`);

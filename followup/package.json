@@ -1,7 +1,7 @@
 {
-  "name": "konecta-followup-worker",
+  "name": "proj-chat-followup-worker",
   "version": "1.0.0",
-  "description": "Worker de follow-up automático para Konecta",
+  "description": "Worker de follow-up automático para Proj-Chat",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
