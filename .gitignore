@@ -1,0 +1,30 @@
+# Variáveis de ambiente (contêm senhas e tokens)
+.env
+evolution/.env
+chatwoot/.env
+typebot/.env
+
+# Dumps de banco de dados
+scripts/db-dumps/
+backups/
+
+# Dependências
+node_modules/
+
+# Documentação gerada
+Konecta_Documentacao_Completa.pdf
+scripts/gerar_documentacao.py
+
+# Imagens de exemplo
+imagem de exemplos/
+
+# SQL com dados do bot
+update_bot.sql
+
+# Ferramentas locais
+.claude/
+.playwright-mcp/
+
+# OS
+Thumbs.db
+.DS_Store

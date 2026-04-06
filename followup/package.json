@@ -1,0 +1,12 @@
+{
+  "name": "konecta-followup-worker",
+  "version": "1.0.0",
+  "description": "Worker de follow-up automático para Konecta",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.0"
+  }
+}
